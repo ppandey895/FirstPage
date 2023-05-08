@@ -1,0 +1,64 @@
+.explore {
+  position: relative;
+}
+
+.explore h1 {
+  color: #eee;
+}
+
+.explore .search {
+  display: flex;
+  width: clamp(250px, 80%, 600px);
+  margin-block: 2rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50vw;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(160deg, rgb(0 0 0 / 0.3), rgb(0 0 0 / 0.05));
+}
+
+.explore .search button,
+.explore .search input {
+  font-family: 'Lato';
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  color: rgb(255 255 255 / 0.8);
+  background: none;
+  border: none;
+  text-transform: lowercase;
+}
+
+.explore .search input {
+  flex-grow: 0.7;
+  font-size: 1.4rem;
+}
+
+.explore .search button {
+  padding: 0;
+}
+
+.explore .search button svg {
+  width: 1.3rem;
+  fill: rgb(255 255 255 / 0.6);
+  cursor: pointer;
+  transition: fill 300ms ease-out;
+}
+
+.explore .search input:focus {
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+.explore .search button:hover {
+  fill: var(--theme);
+}
+
+.explore .no-results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  background: linear-gradient(115deg, rgb(142 255 206 / 0.8), rgb(46 170 116 / 0.09));
+  border-radius: 5px;
+}

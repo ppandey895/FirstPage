@@ -1,0 +1,112 @@
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.profile-page .user-card {
+  background-image: linear-gradient(45deg, seagreen 0%, #359df2 40%, #0a5693);
+  background-size: 400% 400%;
+  align-items: center;
+  justify-content: space-evenly;
+  animation: profileBg 8s infinite linear alternate;
+}
+
+.profile-page .user-card,
+.profile-page .options {
+  margin-block: 1.5rem;
+  margin-right: 1.5rem;
+  width: clamp(300px, 70vw, 700px);
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: 3px 4px 25px rgb(0 0 0 / 0.2);
+}
+
+@keyframes profileBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.profile-page .title {
+  font-size: 1.2rem;
+}
+ 
+.user-card img {
+  height: clamp(100px, 20vw, 200px);
+  width: clamp(100px, 20vw, 200px);
+  object-fit: cover;
+  object-position: center;
+  margin-block: 1rem;
+  border-radius: 10vw;
+  box-shadow: 0 0 30px rgb(0 0 0 / 0.2);
+  transition-property: scale, rotate, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: ease-out;
+}
+
+.user-card img:hover {
+  scale: 1.1;
+  rotate: -1.9deg;
+  filter: hue-rotate(35deg);
+  border-radius: 5vw;
+}
+
+.user-card .user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  max-width: 45%;
+  text-align: right;
+}
+
+.user-info .name {
+  font-size: 1.5rem;
+  border-bottom: 3px solid var(--theme);
+}
+
+.user-info .bio {
+  color: rgb(255 255 255 / 0.7);
+}
+
+.user-info div:nth-child(n + 2) {
+  margin-top: 0.75rem;
+}
+
+.profile-page .options {
+  background: rgb(0 0 0 / 0.2);
+  margin-bottom: 6rem;
+  margin-inline: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.options button {
+  padding: 0.5rem 1rem;
+  background: #359df2;
+  border: none;
+  border-radius: 5px;
+  color: #eee;
+  font-weight: bold;
+  font-family: 'Averta';
+  cursor: pointer;
+  transition: scale 200ms ease, filter 200ms ease;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+button:active {
+  scale: 1.05;
+}

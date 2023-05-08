@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Lato:wght@100&display=swap');
+
+@font-face {
+  font-family: 'Averta';
+  src: url('assets/AvertaDemoPECuttedDemo-Regular.otf');
+  font-weight: 100;
+}
+
+:root {
+  --charcoal: #373f51ff;
+  --theme: rgba(140, 255, 206, 0.8);
+  --honeydew: #dfd;
+  --ash-gray: #aeb7b3ff;
+  --rose-madder: #df2935ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 6px; 
+  height: 6px
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--honeydew);
+  border: 1px solid var(--charcoal);
+  border-radius: 100vw;
+}
+
+
+html {
+  font: 15px;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--charcoal);
+  font-family: 'Josefin Sans', 'Lato', 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--theme);
+}
+
+.App {
+  color: var(--honeydew);
+}
+
+@keyframes pulse {
+ from {}
+ to { background: rgb(255 255 255 / 0.4); } 
+}
+
+@media only screen and (max-width:  600px) {
+  html {
+    font-size: 13px;
+  }
+
+  .App {
+    margin-top: 2rem;
+  }
+
+  .App > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home .carousel {
+    width: 87vw;
+  } 
+
+  .inner-carousel .carousel-item {
+    width: 88vw;
+    height: 300px;
+  }
+
+  nav {
+    bottom: 0;
+    height: 3rem;
+    width: 100vw;
+    padding: 1rem 0 0 0;
+  }
+
+  nav .navbar {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  nav .navbar .logo {
+    display: none;
+  }
+
+  nav .navbar .nav-item {
+    padding: 1.2rem;
+  }
+
+  .cards {
+    justify-content: space-around;
+  }
+
+  .cards .card {
+    flex-direction: row;
+    padding-inline: 1rem;
+    justify-content: center;
+    min-width: 300px;
+  }
+
+  .card img {
+    margin-right: 1.5rem;
+  }
+
+  .card .content a {
+    width: 75%;
+  }
+
+  .explore .no-results {
+    width: 80%;
+  }
+
+  .profile-page .user-card {
+    flex-direction: column;
+  }
+
+  .user-card .user-info {
+    text-align: center;
+    align-items: center;
+  }
+
+  .profile-page .fav-books,
+  .profile-page .user-card {
+    margin-inline: 4rem;
+  }
+}
+
+@media only screen and (min-width:  600px) {
+  nav {
+    left: 0;
+    height: 98vh;
+    top: 50%;
+    transform: translate(0.5rem, -50%);
+    border-radius: 10px;
+    width: 1.5rem;
+  }
+
+  .App {
+    margin-left: 8rem;
+  }
+
+  .App > div {
+    margin-top: 2rem;
+  }
+
+  .home .carousel {
+    margin-right: 4rem;
+  }
+
+  .inner-carousel .carousel-item {
+    width: calc(100vw - 10rem);
+    height: 400px;
+  }
+
+  nav .navbar {
+    flex-direction: column;
+  }
+
+  .navbar .nav-item {
+    width: 100%;
+  }
+
+  .navbar .nav-item:last-child {
+    margin-top: auto;
+  }
+
+  nav:hover {
+    width: 7.5rem;
+  }
+
+  nav:hover .link-text {
+    display: block;
+  }
+
+  nav:hover .logo svg {
+    transform: rotate(180deg);
+  }
+
+  .cards {
+    margin-right: 1.5rem;
+  }
+
+  .explore .no-results {
+    margin-right: 4rem;
+  }
+}
+
+

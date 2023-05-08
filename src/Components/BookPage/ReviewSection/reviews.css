@@ -1,0 +1,157 @@
+.review-section {
+	margin-bottom: 5rem;
+}
+
+.review-form {
+	position: relative;
+	margin-block: 2rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.review-form input {
+	color: white;
+	padding: 0.75rem 1.5rem;
+	min-width: 200px;
+	margin-top: 1rem;
+}
+
+.review-form label {
+	margin-block: 0.5rem 1rem;
+}
+
+.review-form input::placeholder {
+	color: rgb(255 255 255 / 0.6);
+}
+
+.review-form input#review-text {
+	width: 60%;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid rgb(255 255 255 / 0.3);
+	border-radius: 4px;
+	outline: none;
+}
+
+.review-form input#review-text:focus {
+	background: rgb(255 255 255 / 0.1);
+}
+
+.review-form label.word-count {
+	position: absolute;
+	top: 1.3rem;
+	left: calc(60% + 4rem);
+}
+
+.review-form input#rating {
+	-webkit-appearance: none;
+	padding: 0.45rem;
+	height: 10px;
+	border-radius: 10vw;
+	background: rgb(255 255 255 / 0.1);
+	border: 1px solid rgb(255 255 255 / 0.3);
+	outline: none;
+	opacity: 0.7;
+	transition: opacity .2s;
+}
+
+.review-form input#rating:hover {
+	opacity: 1;
+}
+
+.review-form input#rating::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	border-radius: 10vw;
+	background: rgba(140, 255, 206, 0.8);
+	cursor: pointer;
+}
+
+.review-form button {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--theme);
+  border: none;
+  border-radius: 2px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Averta';
+  cursor: pointer;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.reviews {
+	margin-block: 2rem;
+	margin-right: 3rem;
+}
+
+.reviews .review {
+	background: rgb(255 255 255 / 0.1);
+	padding: 0.1rem 0.75rem 0.5rem;
+	margin-top: 0.75rem;
+}
+
+.reviews .review div {
+	margin-top: 0.5rem;
+}
+
+.reviews .review > div:first-child {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.reviews .review div .user {
+	font-size: 1.1rem;
+	color: rgba(140, 255, 206, 0.8);
+	font-weight: 600;
+}
+
+.reviews .review div .time {
+	font-size: 0.8rem;
+	opacity: 0.5;
+}
+
+.review .votes {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	align-items: center;
+	justify-content: center;
+}
+
+.review .votes button {
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+.votes button svg {
+	width: 1.2rem;
+	height: fit-content;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+button svg.active path {
+	fill: rgba(140, 255, 206, 0.8);
+}
+
+@media only screen and (max-width: 600px) {
+	.review-form label.word-count {
+		top: 3.4rem;
+		left: 85%;
+		font-size: 0.8rem;
+	}
+
+	.reviews {
+		margin-inline: auto;
+		width: 80%;
+	}
+}

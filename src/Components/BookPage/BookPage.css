@@ -1,0 +1,129 @@
+.book-page {
+  margin-block: 2rem 6rem;
+  margin-right: 6rem;
+  background: linear-gradient(45deg, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0));
+  border-radius: 6px;
+
+}
+
+.book-page .book-info {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  justify-content: space-around;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(200deg, #dd3838eb 40%, rgb(120 35 70 / 49%) 100%);
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.book-info .details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details > div {
+  margin-bottom: 0.75rem;
+}
+
+.details .title {
+  font-size: 2rem;
+}
+
+.details .author {
+  font-size: 1.5rem;
+  color: var(--theme);
+}
+
+.details .genre {
+  background: rgb(255 255 255 / 0.2);
+  padding: 0.25rem 0.5rem;
+  width: fit-content;
+
+}
+
+.book-info .image img {
+  width: clamp(150px, 20vw, 250px);
+  border-radius: 6px;
+}
+
+.details .options {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details .options button {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--theme);
+  border: none;
+  border-radius: 2px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Averta';
+  cursor: pointer;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.details .options button svg {
+  width: 1rem;
+  margin-right: 6px;
+}
+
+.book-page .desc,
+.book-page .general {
+  padding: 1.5rem 3rem;
+}
+
+.book-page .desc h2 {
+  margin-bottom: 1rem;
+}
+
+.book-page .desc p {
+  word-spacing: 0.3rem;
+  line-height: 1.2rem;
+  text-align: justify;
+}
+
+.book-page .general {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 950px) {
+  .details .title {
+    font-size: 1rem;
+  }
+
+  .details .author {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .book-page {
+    margin-inline: auto;
+    width: 85%;
+  }
+
+  .book-page .book-info {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .book-info .details {
+    max-width: 65%;
+    align-items: center;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .book-page .general {
+    width: 80%;
+  }
+}
