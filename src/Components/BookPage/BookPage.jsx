@@ -17,7 +17,7 @@ function BookPage(props) {
 	let { id } = useParams();
 	id = id[0] === '-' ? id.slice(1, id.length) : id;
 
-	const API_KEY = 'AIzaSyDyZhR6gwfh50HbJqE9gaWsuNRs56rqaYk'; 
+	const API_KEY = import.meta.env.VITE_API_KEY; 
 
 	useEffect(() => {
 		const url = `https://www.googleapis.com/books/v1/volumes?q=${id}&key=${API_KEY}`;
